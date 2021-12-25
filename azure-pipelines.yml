@@ -25,3 +25,9 @@ steps:
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
+- task: Docker@2
+  inputs:
+    containerRegistry: 'java'
+    repository: 'kamal94/docker101tutorial'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
